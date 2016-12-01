@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.newtv.dao.ExcelDao">
+  <delete id="deleteAllPlayBill">
+      delete from playbill 
+  </delete>
+  <insert id="savePlayBill" parameterType="com.newtv.entity.PlayBill">
+   insert into playbill (start_time,day,program,channelname) values(#{start_time},#{day},#{program},#{channelname})
+  </insert>
+  <select id="getAllProgramByMon" resultType="com.newtv.entity.PlayBill">
+  select * from playbill where day="星期一"
+  </select>
+    <select id="getAllProgramByTue" resultType="com.newtv.entity.PlayBill">
+  select * from playbill where day="星期二"
+  </select>
+    <select id="getAllProgramByWed" resultType="com.newtv.entity.PlayBill">
+  select * from playbill where day="星期三"
+  </select>
+    <select id="getAllProgramByThu" resultType="com.newtv.entity.PlayBill">
+  select * from playbill where day="星期四"
+  </select>
+    <select id="getAllProgramByFri" resultType="com.newtv.entity.PlayBill">
+  select * from playbill where day="星期五"
+  </select>
+    <select id="getAllProgramBySat" resultType="com.newtv.entity.PlayBill">
+  select * from playbill where day="星期六"
+  </select>
+    <select id="getAllProgramBySun" resultType="com.newtv.entity.PlayBill">
+  select * from playbill where day="星期日"
+  </select>
+</mapper>

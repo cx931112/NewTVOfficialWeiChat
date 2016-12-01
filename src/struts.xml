@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<action-mappings>
+	<package name="default" namespace="">
+	    <action name="check" classPath="com.newtv.action.WeiXinAction" method="doWeiXin"></action>
+		
+		<action	name="login"	classPath="com.newtv.action.UserAction"	method="login">
+
+		</action><!-- 表单内容先用ajax验证 -->
+		<action name="exit" classPath="com.newtv.action.UserAction" method="exit">
+		<result name="success" type="redirect" path="/login.jsp"></result>
+		</action>
+        <action name="tomain" classPath="com.newtv.action.UserAction" method="tomain" >
+         	<result name="success" type="dispatcher" path="/WEB-INF/jsp/main.jsp"></result>
+        </action><!-- 验证成功表单提交进入主页 -->
+       <action name="excelprase" classPath="com.newtv.action.ExcelAction" method="prase">
+		<result name="success" type="dispatcher" path="/WEB-INF/jsp/state.jsp"></result>
+		</action>
+		<action name="getProgram" classPath="com.newtv.action.ExcelAction" method="getprogram">
+		 <result name="success" type="dispatcher" path="/WEB-INF/jsp/getprogram.jsp"></result>
+		</action>
+	</package>	
+</action-mappings>

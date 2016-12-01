@@ -1,0 +1,4 @@
+transAction=com.newtv.transaction.impl.MyBatisTransactionManagerImpl
+mybatisDao=com.newtv.dao
+userService=com.newtv.serviceimpl.UserServiceImpl
+excelService=com.newtv.serviceimpl.ExcelServiceImpl
